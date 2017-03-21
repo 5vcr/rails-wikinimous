@@ -1,0 +1,12 @@
+<%= link_to "< back", articles_path %>
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+<p>Created on: <%= @article.created_at %></p>
+<p>Updated on: <%= @article.updated_at %></p>
+<%= link_to "Edit this article", edit_article_path(@article) %>
+<br>
+<%= link_to "Delete this article", article_path(@article.id),
+  method: :delete,
+  data: { confirm: "Are you sure?" } %>
+<br>
+
